@@ -38,7 +38,7 @@ class APIClient:
 
 # 创建 API 客户端（两个后端）
 api = APIClient("http://127.0.0.1:7030", timeout=5)  # 用户注册后端（5秒超时）
-api1 = APIClient("http://127.0.0.1:8000", timeout=30)  # 算法后端（15秒超时）
+api1 = APIClient("http://127.0.0.1:8000", timeout=60)  # 算法后端（15秒超时）
 
 # 注册用户并获取推荐
 def register_test(name, email, password, phone, description, img_url, food_type, taste, diet_goal):
@@ -75,4 +75,4 @@ def register_test(name, email, password, phone, description, img_url, food_type,
         print("✅ 推荐成功:", recommend_response)
     else:
         print("❌ 推荐请求失败")
-
+    
